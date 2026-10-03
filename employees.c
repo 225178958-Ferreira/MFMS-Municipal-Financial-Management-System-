@@ -34,9 +34,28 @@ void addEmployee(void)
     Employee *e = &employees[employeeCount];
 
     printf("\n--- Add Employee ---\n");
+    do
+{
     printf("Employee ID: ");
     scanf("%d", &e->employeeID);
     getchar();
+
+    int duplicate = 0;
+
+    for (int i = 0; i < employeeCount; i++)
+    {
+        if (employees[i].employeeID == e->employeeID)
+        {
+            duplicate = 1;
+            printf("Employee ID already exists. Please enter a different ID.\n");
+            break;
+        }
+    }
+
+    if (duplicate)
+        e->employeeID = -1;
+
+} while (e->employeeID == -1);
 
     printf("Name: ");
     readLine(e->name, sizeof(e->name));
