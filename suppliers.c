@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include "suppliers.h"
+
 /* All suppliers (static = private to this file) */
 static Supplier suppliers[MAX_SUPPLIERS];
+
 /* Number of suppliers stored (also the next free slot) */
 static int supplierCount = 0;
 
@@ -15,6 +17,7 @@ static void readLine(char *text, int size)
     if (fgets(text, size, stdin))
         text[strcspn(text, "\n")] = '\0';
 }
+
 /* Waits for ENTER before returning to the menu */
 static void pauseScreen(void)
 {
@@ -32,6 +35,7 @@ void addSupplier(void)
         printf("Supplier storage is full.\n");
         return;
     }
+    
     /* Next free slot */
     Supplier *s = &suppliers[supplierCount];
 
@@ -39,11 +43,9 @@ void addSupplier(void)
     scanf("%d", &s->supplierID);
     
      /* Removes the '\n' left by scanf() so  fgets() is not skipped */
-    
     getchar();
     
     /* used to stops text going past the end of the array (sizeof())  */
-    
     printf("Supplier Name: ");
     readLine(s->name, sizeof(s->name));
     printf("Email: ");
@@ -95,15 +97,16 @@ void searchSupplier(void)
             return;
         }
     }
+    
      /* Nothing is found */
     printf("Supplier not found.\n");
 }
 
  /* Supplier menu: repeats until the user chooses 4 (Back) */
-
 void supplierMenu(void)
 {
     int choice;
+    
     /* do-while and switch */
     do
     {
@@ -131,7 +134,6 @@ int getSupplierCount(void) { return supplierCount; }
 Supplier *getSuppliers(void) { return suppliers; }
 
 /* Loads 2 sample suppliers */
-
 void supplierSeedData(void)
 {
     suppliers[0] = (Supplier){2001, "ABC Office Supplies", "abc@example.com", "0812345678", "Windhoek"};
