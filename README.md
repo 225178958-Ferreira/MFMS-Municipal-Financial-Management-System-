@@ -2,6 +2,30 @@
 
 This is a demonstration prototype based on the PAP521S Project A brief.
 
+# Municipal Financial Management System (MFMS)
+
+## Group Number
+Group 
+
+## Group Members
+- 1. 225172534 – Amuthenu - Employee Management 
+- 2. 226122409 – Angula - Budget Management 
+- 3. 224092308 – Iblamechar - Supplier Management 
+- 4. 225129205 – Nganjone - Asset Management
+- 5. 223077941 – Hausiku  - Reports 
+- 6. 225170752 – Mbambi  - Functions, integration and validation  
+- 7. 225178958 – Ferreira - Testing, documentation and Git coordination 
+
+## Project Description
+The Municipal Financial Management System (MFMS) is a C-based application designed to help municipalities manage employee records, budgets, suppliers, assets, and financial reports efficiently.
+
+## System Features
+- Employee management (add, search, display)
+- Budget tracking and calculations
+- Supplier registration and tender evaluation
+- Asset management and depreciation tracking
+- Report generation for financial summaries
+
 ## Language
 ANSI C / C99
 
