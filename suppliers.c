@@ -10,7 +10,9 @@ static int supplierCount = 0;
 
 /*
 *Reads a line of text
-*fgets() keeps the '\n', which breaks strcmp(), so strcspn() can find and relplace it 
+*fgets() keeps the '\n'
+*breaks strcmp()
+*strcspn() can find and relplace it 
 */
 static void readLine(char *text, int size)
 {
