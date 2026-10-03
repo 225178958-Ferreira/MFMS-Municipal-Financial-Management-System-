@@ -20,5 +20,6 @@ void searchEmployee(void);
 void calculateEmployeeSalary(void);
 int getEmployeeCount(void);
 Employee *getEmployees(void);
+void employeeSeedData(void);
 
 #endif
