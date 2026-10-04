@@ -10,7 +10,7 @@ Group
 ## Group Members
 - 1. 225172534 – Amuthenu - Employee Management 
 - 2. 226122409 – Angula - Budget Management 
-- 3. 224092308 – Iblamechar - Supplier Management 
+- 3. 224092308 – Simataa - Supplier Management 
 - 4. 225129205 – Nganjone - Asset Management
 - 5. 223077941 – Hausiku  - Reports 
 - 6. 225170752 – Mbambi  - Functions, integration and validation  
