@@ -1,4 +1,4 @@
-# Municipal Financial Management System (MFMS) - Demo
+﻿# Municipal Financial Management System (MFMS) - Demo
 
 This is a demonstration prototype based on the PAP521S Project A brief.
 
@@ -8,13 +8,13 @@ This is a demonstration prototype based on the PAP521S Project A brief.
 Group 
 
 ## Group Members
-- 1. 225172534 – Amuthenu - Employee Management 
-- 2. 226122409 – Angula - Budget Management 
-- 3. 224092308 – Simataa - Supplier Management 
-- 4. 225129205 – Nganjone - Asset Management
-- 5. 223077941 – Hausiku  - Reports 
-- 6. 225170752 – Mbambi  - Functions, integration and validation  
-- 7. 225178958 – Ferreira - Testing, documentation and Git coordination 
+- 1. 225172534 â€“ Amuthenu - Employee Management 
+- 2. 226122409 â€“ Angula - Budget Management 
+- 3. 224092308 â€“ Simataa - Supplier Management 
+- 4. 225129205 â€“ Nganjone - Asset Management
+- 5. 223077941 â€“ Hausiku  - Reports 
+- 6. 225170752 â€“ Mbambi  - Functions, integration and validation  
+- 7. 225178958 â€“ Ferreira - Testing, documentation and Git coordination 
 
 ## Project Description
 The Municipal Financial Management System (MFMS) is a C-based application designed to help municipalities manage employee records, budgets, suppliers, assets, and financial reports efficiently.
@@ -32,7 +32,7 @@ ANSI C / C99
 ## Compile with GCC
 
 ```bash
-gcc -std=c99 -Wall -Wextra main.c employees.c budget.c suppliers.c assets.c reports.c -o mfms
+gcc -std=c99 -Wall -Wextra main.c employees.c budget.c suppliers.c assets.c reports.c input.c -o mfms
 ```
 
 ## Run on Windows
@@ -60,3 +60,19 @@ The program starts with sample records so the menus and reports can be tested im
 ## Note
 
 This is a console demonstration. It stores data in memory while the program is running; it does not use a database or permanent file storage.
+
+
+## Integration and Input Validation
+
+The system uses shared input validation functions implemented in `input.c` and declared in `input.h`.
+
+These reusable functions help ensure that user input is valid before it is processed:
+
+- `getInt()` reads and validates whole-number input.
+- `getNonNegativeFloat()` reads and validates non-negative numerical input.
+- `getMenuChoice()` ensures menu selections fall within an accepted range.
+- `getString()` safely reads non-empty text input.
+
+These functions support consistent input handling across the system and reduce errors caused by invalid user input.
+
+The `input.c` module must be included when compiling the project with GCC.
